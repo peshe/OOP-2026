@@ -9,11 +9,12 @@ Facebook/Messenger - Marty Marinov
 
 ### [Линк към отделното репо](https://github.com/Mart0GD/Object-Oriented-Programming-FMI-2026/tree/main)
 
-## Седмичен разпис (датите, както и темите предвидени за тях са нефиксирани)
+## Седмичен разпис 
 
 | Дата       | Тема |
 |------------|------|
 | **18.02.2026** | [Тема 1](https://github.com/Mart0GD/Object-Oriented-Programming-FMI-2026/tree/main/week_01) |
+
 
 
 
