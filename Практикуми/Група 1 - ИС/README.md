@@ -3,12 +3,16 @@
 # хон. асистент Данаил Иванов
 
 Discord - danailivanov
+
 Email - dani.21@abv.bg
+
 Facebook/Messenger - Данаил Иванов
 
 # Линк към отделното репо с теория и задачи:
+
 https://github.com/DanailIvanov21/OOP-IS-2025-2026
 
 # Седмичен разпис:
+
 Седмица 1 - https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week%201
 
