@@ -16,6 +16,6 @@ Facebook/Messenger - Данаил Иванов
 
 |          |           |   
 |----------|-----------| 
-|Седмица 1 |[Практикум 1](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week%201)|Динамична памет, Указатели към функция, Побитови операции|
+|[Week 01](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week%201)|Динамична памет, Указатели към функция, Побитови операции|
 
 
