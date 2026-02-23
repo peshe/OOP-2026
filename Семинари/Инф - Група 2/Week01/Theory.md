@@ -129,7 +129,7 @@ int main()
     int arr[5] {1, 2, 3, 4, 5};
     
     map(arr, 5, [](int e){return e * 2}); // 2  4  6  8  10
-    map(arr, 5, [](int e){return e * e}); // 4 16 36 64 100
+ идентификаторът    map(arr, 5, [](int e){return e * e}); // 4 16 36 64 100
 }
 ```
 
