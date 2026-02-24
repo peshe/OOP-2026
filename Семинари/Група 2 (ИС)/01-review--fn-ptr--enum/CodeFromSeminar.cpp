@@ -84,6 +84,7 @@ int main()
 
     // Стъпка 4. Изтриваме паметта  -- new int(5) => delete, new int[5] => delete[]
     delete[] pArr;
+    pArr = nullptr;  // и нулираме на указателя
 
     ///
     /// Указатели към функции (Function pointers)
