@@ -1,0 +1,56 @@
+#include <cstddef>
+#include <stdexcept>
+#include <iostream>
+
+int a[20];
+
+// връща позицията на първата намерена стойност false в а
+static size_t first_false(bool * a, size_t n)
+{
+    for(size_t i = 0; i < n; ++i)
+        if(false == a[i])
+            return i;
+
+    return 0;
+}
+
+
+// проверка дали числото n е просто по метода на Ератостен
+bool eratosthenes(size_t n)
+{
+    n++;
+
+    // true -> зачеркнато
+    bool *s = new bool[n];
+    for(size_t i = 0; i<n; ++i)
+        s[i] = false;
+    
+    s[0]=s[1]=true;
+    size_t base = 0;
+    bool rtn = false;
+    while(true)
+    {
+        base = base + 1 + first_false(s + base + 1,n - base - 1);
+
+        if (0 == base)
+        {
+            rtn = false;
+            break;
+        }
+
+        if (base * base > n)
+        {
+            rtn = (s[n-1] == false);
+            break;
+        }
+
+        for(size_t k = base + base; k < n; k+=base)
+            s[k] = true;
+
+    };
+
+    delete[] s;
+    return rtn;
+
+}
+
