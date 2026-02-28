@@ -37,9 +37,20 @@ bool getBit(unsigned char num, int k)
 }
 ```
 
-### Задача 3
+### Задача 3  
+Идеята е да shift-ваме числото надясно (делим на 2) и всеки път да проверяваме последния бит. Ако е 1, значи числото не е степен на двойката. Връщаме `true` точно тогава, когато числото стане точно `1`.
 ``` c++
-
+bool isPowerOf2(unsigned num)
+{
+	if (num == 0) return false;
+	
+	while (num != 1)
+	{
+		if (num & 1) return false;
+		num = num >> 1;
+	}
+	return true;
+}
 ```
 
 ### Задача 4
