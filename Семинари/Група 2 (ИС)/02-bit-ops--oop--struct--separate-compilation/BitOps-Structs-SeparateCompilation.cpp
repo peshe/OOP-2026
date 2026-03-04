@@ -1,5 +1,7 @@
 #include <iostream>
+#include <cstring>
 #include "Point.h"
+#include "Person.h"
 
 void bit_operations()
 {
@@ -52,6 +54,7 @@ void structs()
     // Всъщност вътрешно автоматично прави почленно присвояване на x и y:
     // pt2.x = pt3.x;
     // pt2.y = pt3.y;
+    // * Масивите се държат по по-различен начин.
 
     std::cout << pt.x << ", " << pt.y;
 
@@ -67,13 +70,77 @@ void structs()
     ptrPt->y = 6;
 
     (*ptrPt).x = 2;  // е еквивалентно на ptrPt->x = 2;
+
+    //// Копиране на обикновени масиви - припомняне ////
+    float arr[] = { 2.3f, 3.4f, 5.1f };
+    // int arrCopy[] = arr;  - не е позволено
+    // int* pArr = arr;      - не е копие
+
+    const int elemCnt = sizeof(arr)/sizeof(arr[0]);
+    float arrCopy[elemCnt];
+    for (int i = 0; i < elemCnt; i++)
+        arrCopy[i] = arr[i];
+
+    std::cout << "\n\n--------\n";
+    std::cout << arr[2] << " ";
+    std::cout << "\n";
+    ////////////////////////////////////////////////////
+
+    //// Копиране на масиви в структури ////
+    Person person;  // Създава човек с име и години по-подразбиране
+    strcpy(person.name, "gosho");
+    person.age = 20;
+    std::cout << "person: ";
+    printPerson(person);
+
+    Person person2 = person;  // Тук масива с името на човека се копира!
+    person2.name[0] = 't';
+    std::cout << "person: ";
+    printPerson(person);
+    std::cout << "person2: ";
+    printPerson(person2);
+
+    const int peopleCnt = 10;
+    Person arrPeople[peopleCnt] = { person, person2, };  // Копия на хората
+    std::cout << "arrPeople[2]: ";
+    printPerson(arrPeople[2]);  // "Празен" човек - със стойности по-подразбиране
+
+    int sizeOfPerson = sizeof(Person);
+    int sizeOfArr = sizeof(arrPeople);
+    int elements = sizeOfArr / sizeOfPerson;
+    std::cout << "Person size: " << sizeOfPerson << "\n";
+    std::cout << "Elements: " << elements << "\n";
+}
+
+void fun(int a)
+{
+    std::cout << ++a << "\n";
+}
+
+void fun2(int& a)
+{
+    std::cout << ++a << "\n";
 }
 
 int main()
 {
     bit_operations();
+    std::cout << "==========\n";
     separate_compilation();
+    std::cout << "==========\n";
     structs();
+    std::cout << "==========\n";
+
+    int myNumber = 10;
+    fun(myNumber);
+    std::cout << "after fun: " << myNumber << "\n";
+
+    fun2(myNumber);
+    std::cout << "after fun2: " << myNumber << "\n";
+
+    Person person;
+    readPerson(person);
+    printPerson(person);
 
     return 0;
 }
