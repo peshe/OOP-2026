@@ -186,7 +186,7 @@ ADD(z, 3)
 END
 
 Result.txt
-PROGRAM First
+First
 a = 15
 d = 20
 SecondProgram ERROR
@@ -194,3 +194,4 @@ ThirdProgram
 a = 3
 z = 8
 ```
+
