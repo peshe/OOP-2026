@@ -164,3 +164,149 @@ float getAvgGrade(const Student students[], int studCount)
 	return sum / studCount;
 }
 ```
+
+### Задача 6
+``` cpp
+struct Date
+{
+	unsigned day : 5;
+	unsigned month : 4;
+	unsigned year : 23;
+};
+
+void readDate(Date& date)
+{
+	unsigned buffer;
+	std::cin >> buffer;
+	date.day = buffer;
+	std::cin >> buffer;
+	date.month = buffer;
+	std::cin >> buffer;
+	date.year = buffer;
+}
+
+void printDate(const Date& date)
+{
+	std::cout << "Day: " << date.day << " Month: " << date.day << " Year: " << date.day << '\n';
+}
+```
+
+### Задача 7
+```cpp
+enum class Genre
+{
+	UNKNOWN = -1,
+
+	RPG,
+	MMO,
+	MOBA,
+
+	COUNT
+};
+
+
+struct Game
+{
+	char* name;
+	Date releaseDate;
+	int ageRating;
+	Genre genre;
+	float price;
+};
+
+void readGame(Game& game)
+{
+	char buffer[100];
+	std::cin >> buffer;
+	int nameLen = strlen(buffer);
+	game.name = new (std::nothrow) char[nameLen + 1] {};
+	if (!game.name)
+	{
+		return;
+	}
+	strcpy(game.name, buffer);
+	readDate(game.releaseDate);
+	std::cin >> game.ageRating >> game.price;
+}
+
+void printGame(const Game& game)
+{
+	std::cout << game.name << '\n';
+	printDate(game.releaseDate);
+	std::cout << game.ageRating << '\n' << game.price << '\n';
+}
+
+void deleteGame(Game& game)
+{
+	delete[] game.name;
+}
+
+void printMostExpensive(const Game* games, int n)
+{
+	if (!games) return;
+	int mostExp = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (games[i].price > games[mostExp].price)
+		{
+			mostExp = i;
+		}
+	}
+	printGame(games[mostExp]);
+}
+
+void printWithCensor(const Game* games, int n, unsigned playerAge)
+{
+	if (!games) return;
+	for (int i = 0; i < n; i++)
+	{
+		if (games[i].ageRating <= playerAge)
+		{
+			printGame(games[i]);
+		}
+	}
+}
+
+void printFromYear(const Game* games, int n, int year)
+{
+	if (!games) return;
+	for (int i = 0; i < n; i++)
+	{
+		if (games[i].releaseDate.year == year)
+		{
+			printGame(games[i]);
+		}
+	}
+}
+
+void printWithGenre(const Game* games, int n, Genre genre)
+{
+	if (!games) return;
+	for (int i = 0; i < n; i++)
+	{
+		if (games[i].genre == genre)
+		{
+			printGame(games[i]);
+		}
+	}
+}
+
+
+int main()
+{
+	int n;
+	std::cin >> n;
+	Game* games = new (std::nothrow) Game[n];
+	if (!games) return -1;
+	
+	for (int i = 0; i < n; i++)
+	{
+		readGame(games[i]);
+	}
+	printMostExpensive(games, 3);
+	printWithCensor(games, 3, 18);
+
+	printFromYear(games, 3, 2000);
+	printWithGenre(games, 3, Genre::MMO);
+}
+```
