@@ -71,3 +71,7 @@ std::fstream fs(filename, mode1 | <mode2 | ...);        //(std::ios::in, std::io
 |eof()   | Достигнат е края на файла. |
 
 clear() - изчиства потока. Премахва bad, fail, eof, вдига good.
+
+
+### **[hexed.it](https://hexed.it/)**  
+**Много полезен tool за дебъгване на задачи с файлове!!!**
