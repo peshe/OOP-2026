@@ -15,9 +15,11 @@ int main()
 	func(1, 2);             //2
 	func<double>(1.5, 2);   //3
 	func(1.2, 2);           //4
-	func(3, 'a');           //5
-	func<int>(3, 'a');      //6
-	func<int>(3, 010);      //7
+	func((int)1.2, 2);	    //5
+	func(1.2, (double)2);   //5
+	func(3, 'a');           //6
+	func<int>(3, 'a');      //7
+	func<int>(3, 010);      //8
 }
 ```
 ### Задача 1
