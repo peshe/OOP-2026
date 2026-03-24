@@ -2,24 +2,27 @@
 
 #include "personList.h"
 
+#include <new>
+#include <iostream>
 
 bool personListInit(PersonList & list)
 {
     list.size = 0;
     list.data = nullptr;
+    return true;
 }
 
 
 bool personListAdd(PersonList & list, Person const & p)
 {
-    Person * newData = new(std::nothrow) Person[p.size + 1];
+    Person * newData = new(std::nothrow) Person[list.size + 1];
     if(newData == nullptr)
         return false;
 
-    for(size_t k = 0; k < <list.size; ++k)
+    for(size_t k = 0; k < list.size; ++k)
         newData[k] = list.data[k];
 
-    newData[size] = p;
+    newData[list.size] = p;
 
     delete[] list.data;
 
@@ -39,7 +42,7 @@ bool personListDelete(PersonList & list, size_t idx)
 
     for(size_t k = idx; k + 1 < list.size; ++k)
     {
-        list.data[k] = list.data[k+1]
+        list.data[k] = list.data[k+1];
     }
 
     list.size--;
@@ -53,6 +56,9 @@ bool personListDestroy(PersonList & list)
 {
     delete[] list.data;
     list.size = 0;
+    list.data = nullptr;
+    
+    return true;
 }
 
 
@@ -62,8 +68,9 @@ bool personListPrint(PersonList const & list)
     for(size_t k = 0; k < list.size; ++k)
     {
         Person const & p = list.data[k];
-        std::cout << p.name << " " << p.family << " " << p.birthDate.year << " " 
-                  << p.birthDate.month << " " << p.birthDate.day  << std::endl;
+        std::cout << k+1 << "." << p.name << " " << p.family << " "
+                  << p.birthDate.day << "." << p.birthDate.month << "." << p.birthDate.year
+                  << std::endl;
     }
     return std::cout.good();
 }

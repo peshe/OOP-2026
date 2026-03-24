@@ -2,6 +2,8 @@
 
 #include "person.h"
 
+#include <cstddef>
+
 Person somePeople[] = 
 {
     {"Ivan", "Petrov", {1990, 5, 12}},
