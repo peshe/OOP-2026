@@ -2,7 +2,7 @@
 #include "personList.h"
 
 // включваме масива с тестови данни
-#include "somePeople.inl"
+// #include "somePeople.inl"
 
 #include <fstream>
 
