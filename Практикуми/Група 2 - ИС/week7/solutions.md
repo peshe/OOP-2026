@@ -129,3 +129,75 @@ private:
 	float grade;
 };
 ```
+
+### Задача 2
+```cpp
+class Beverage
+{
+public:
+	Beverage()
+		:Beverage("",0.0, false)
+	{}
+
+	Beverage(const char* name, float price, bool isAlcoholic)
+	{
+		setName(name);
+		setPrice(price);
+		setIsAlcoholic(isAlcoholic);
+	}
+
+	Beverage(const Beverage& other)
+		:price(other.price), isAlcoholic(other.isAlcoholic)
+	{
+		setName(other.name);
+	}
+
+	Beverage& operator=(const Beverage& other)
+	{
+		if (&other != this)
+		{
+			setName(other.name);
+			price = other.price;
+			isAlcoholic = other.isAlcoholic;
+		}
+		return *this;
+	}
+
+	~Beverage()
+	{
+		delete[] name;
+	}
+
+	void setName(const char* name)
+	{
+		if (!name) throw std::runtime_error("invalid name");
+		int lenght = strlen(name);
+		char* newStr = new char[lenght + 1] {};
+		strcpy(newStr, name);
+		delete[] this->name;
+		this->name = newStr;
+	}
+
+	void setPrice(float newPrice)
+	{
+		if (newPrice < 0) throw std::runtime_error("invalid price");
+		price = newPrice;
+	}
+
+	void setIsAlcoholic(bool isAlcoholic) { this->isAlcoholic = isAlcoholic; }
+
+	const char* getName() const { return name; }
+	float getPrice() const { return price; }
+	bool getIsAlcoholic() const { return isAlcoholic; }
+
+	void print() const
+	{
+		std::cout << name << " price: " << price << " alcoholic: " << std::boolalpha << isAlcoholic << '\n';
+	}
+
+private:
+	char* name = nullptr;
+	float price;
+	bool isAlcoholic;
+};
+```
