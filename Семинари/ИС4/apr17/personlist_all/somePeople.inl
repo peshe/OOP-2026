@@ -1,7 +1,5 @@
 
-
 #include "person.h"
-
 #include <cstddef>
 
 Person somePeople[] = 
