@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "AdultManager.h"
+#include "AggregationExample.h"
 #include "Singleton.h"
 #include "String.h"
 #include "Hero.h"
@@ -14,6 +15,8 @@ void fun()
 
 int main()
 {
+    AggregationExampleDynamicMemory();
+
     // Singleton s;  // error - private constructor
     Singleton& ref = Singleton::GetInstance();
     ref.DoSth();
