@@ -1,0 +1,4 @@
+3
+1	Wound	Zahari Karabashliev	240
+2	C++	Magda	350
+3	1948	Orwell	300
