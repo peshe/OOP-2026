@@ -4,6 +4,8 @@
 
 ---
 
+*Алтернативно решение на задачата може да намерите [тук](https://github.com/peshe/OOP-2024/tree/main/Control%20Solutions/Control%201).*
+
 ## Moodle
 
 ### Общи инструкции към задачата
