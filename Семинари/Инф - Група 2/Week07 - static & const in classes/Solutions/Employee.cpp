@@ -29,7 +29,7 @@ Employee::Employee(const Employee &other)
 
 Employee &Employee::operator=(const Employee &other)
 {
-    // Basic exception guarantee
+    // No exception guarantee
     if (this != &other)
     {
         destroy();

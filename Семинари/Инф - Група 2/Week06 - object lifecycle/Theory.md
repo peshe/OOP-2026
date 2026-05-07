@@ -373,7 +373,7 @@ public:
 };
 ```
 
-До това се свежда най-типичната (с [Basic Exception Guarantee](https://en.cppreference.com/w/cpp/language/exceptions)) имплементация на operator=.
+До това се свежда най-типичната (с [No Exception Guarantee](https://en.cppreference.com/w/cpp/language/exceptions)) имплементация на operator=.
 
 ## Изключения (exceptions)
 Изключенията прекъсват изпълнението на програмата докато не бъдат "хванати". Ако няма код, който да хване това прекъсване, изпълнението на програмата приключва изцяло. Изключенията могат да представляват на практика всичко - int, char, Person и т.н.. 
