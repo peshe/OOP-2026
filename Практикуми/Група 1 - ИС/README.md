@@ -28,3 +28,4 @@ Facebook/Messenger - Данаил Иванов
 |[Week 10](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week10)|Предефиниране на оператори,Предефиниране на оператори чрез член-функции,Приятелски функции, приятелски класове|
 |[Week 11](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week11)|Наследяване, Подаване като параметри на функции,Конструктури и Деструктори, Копиране при наследяване, Move semantics|
 |[Week 12](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week12)|Статично и динамично свързване,Виртуални таблици,Полиморфизъм,Абстрактен клас, override и final, Колекция - Триене, Копиране|
+|[Week 13](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week13)|Множествено наследяване, Виртуални базови класове|
