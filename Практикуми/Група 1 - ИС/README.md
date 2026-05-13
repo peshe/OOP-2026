@@ -26,5 +26,5 @@ Facebook/Messenger - Данаил Иванов
 |[Week 08](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week%208)|Изключения, Статични член данни и фунцкии|
 |[Week 09](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week%209)|Композиция на обекти,Масиви от обекти|
 |[Week 10](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week10)|Предефиниране на оператори,Предефиниране на оператори чрез член-функции,Приятелски функции и приятелски класове|
-|[Week 11](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week11)|Наследяване, Подаване като параметри на функции,Конструктури и Деструктори при наследяване, Копиране при наследяване, Move semantics|
-|[Week 12](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week12)|Статично и динамично свързване,Виртуални таблици,Полиморфизъм,Абстрактен клас, override и final, Колекция - Хетерогенен контейнер - Триене, Копиране|
+|[Week 11](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week11)|Наследяване, Подаване като параметри на функции,Конструктури и Деструктори, Копиране при наследяване, Move semantics|
+|[Week 12](https://github.com/DanailIvanov21/OOP-IS-2025-2026/tree/main/Week12)|Статично и динамично свързване,Виртуални таблици,Полиморфизъм,Абстрактен клас, override и final, Колекция - Триене, Копиране|
