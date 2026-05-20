@@ -35,12 +35,8 @@ public:
 		return name;
 	}
 
-	//a virtual function can have a body and it can be useful
-	virtual void print() const = 0
-	{
-		std::cout << "I am an animal\n";
-	}
-
+	//a virtual function can have a body (outside the class) and it can be useful
+	virtual void print() const = 0;
 	virtual void makeSound() const = 0;
 	virtual Animal* clone() const = 0;
 protected:
@@ -54,7 +50,12 @@ protected:
 	}
 };
 
-class Cat : virtual public Animal
+void Animal::print() const
+{
+	std::cout << "I am an animal\n";
+}
+
+class Cat : public Animal
 {
 public:
 	Cat(const char* breed, const char* name, unsigned age)
@@ -111,7 +112,7 @@ private:
 	char* breed = nullptr;
 };
 
-class Dog : virtual public Animal
+class Dog : public Animal
 {
 public:
 	Dog(const char* name, unsigned age)
