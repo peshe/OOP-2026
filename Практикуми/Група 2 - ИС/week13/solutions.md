@@ -107,6 +107,7 @@ public:
 	Screen(unsigned rows, unsigned cols)
 		:rows(rows), cols(cols)
 	{
+		if (!rows || ! cols) throw std::runtime_error("invalid arg");
 		items = new ScreenItem **[rows];
 		for (int i = 0; i < rows; i++)
 		{

@@ -15,7 +15,15 @@ public:
 		:Animal(other.name, other.age)
 	{ }
 
-	Animal& operator=(const Animal& other) = delete;
+	Animal& operator=(const Animal& other)
+	{
+		if (this != &other)
+		{
+			setName(other.name);
+			age = other.age;
+		}
+		return *this;
+	}
 
 	virtual ~Animal()
 	{
