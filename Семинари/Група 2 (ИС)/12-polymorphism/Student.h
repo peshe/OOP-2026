@@ -2,7 +2,7 @@
 
 #include "Person.h"
 
-class Student : public Person
+class Student : virtual public Person
 {
 public:
     explicit Student(const char* name = "", unsigned age = 0, const char* fn = "");

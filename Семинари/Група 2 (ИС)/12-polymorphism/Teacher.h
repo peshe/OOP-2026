@@ -1,7 +1,7 @@
 #pragma once
 #include "Person.h"
 
-class Teacher : public Person
+class Teacher : virtual public Person
 {
 public:
     explicit Teacher(const char* name = "", unsigned age = 0, const char* subject = "");
