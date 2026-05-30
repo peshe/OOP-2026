@@ -1,0 +1,1 @@
+### Решението на `2024 - Контролно 2` можете да намерите [тук](https://github.com/peshe/OOP-2024/tree/main/Control%20Solutions/Control%202).
