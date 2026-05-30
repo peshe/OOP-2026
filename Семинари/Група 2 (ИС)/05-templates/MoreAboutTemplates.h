@@ -25,6 +25,12 @@ unsigned factorial<0>()
     return 1;
 }
 
+template<typename T>
+void fun(T sth) {}
+
+template<>
+void fun(int sth) {}
+
 // Нетиповият шаблон Size е компилационна константа!
 template<typename Type, unsigned Size>
 struct Array
