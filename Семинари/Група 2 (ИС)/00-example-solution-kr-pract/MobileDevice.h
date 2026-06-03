@@ -8,7 +8,7 @@ class MobileDevice : public Device
 public:
     MobileDevice(const char* name, unsigned short batteryLevel);
     MobileDevice(unsigned id, const char* name, unsigned short batteryLevel);
-    static MobileDevice* FromLogFile(std::ifstream& logFile);
+    static MobileDevice* FromLogFile(std::ifstream& logFile);  // Factory method
 
     void Print() const override;
     void SaveToLog(std::ofstream& file) const override;

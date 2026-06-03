@@ -21,7 +21,7 @@ public:
 
     virtual void SaveToLog(std::ofstream& file) const;
 
-private:
+protected:
     static unsigned nextId;
 
     const unsigned id = 0;

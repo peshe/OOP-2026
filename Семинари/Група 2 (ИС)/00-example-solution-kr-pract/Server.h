@@ -34,7 +34,7 @@ private:
         void SaveToLog(std::ofstream& out) const;
 
         Device* device = nullptr;
-        unsigned time;
+        unsigned time = 0;
     };
 
     int FindDevice(unsigned deviceId) const;
